@@ -9,7 +9,7 @@ public class FullNameParser {
 
         // Splitting the name
         // \\s+ = one or more whitespace chars
-        String[] nameParts = fullName.split("\\s+");
+        String[] nameParts = fullName.split("\\s+"); //Splits the name into parts
 
         // Storing the first, middle, last names
         String firstName = "";
@@ -17,13 +17,13 @@ public class FullNameParser {
         String lastName = "";
 
         // Checking for only first and last name entered
-        if (nameParts.length == 2) {
+        if (nameParts.length == 2) { // If only two parts of the name is entered, First and Last
             firstName = nameParts[0];
             middleName = "(none)";
             lastName = nameParts[1];
         }
         // Checking for first, middle and last name
-        else if (nameParts.length == 3) {
+        else if (nameParts.length == 3) { // // If 3 parts of the name is entered, First, Middle and Last
             firstName = nameParts[0];
             middleName = nameParts[1];
             lastName = nameParts[2];
